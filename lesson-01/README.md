@@ -8,7 +8,8 @@
    node -v
    npm -v
    ```
-3. Navigate to the Lesson 1 directory:
+3. Navigate to the Lesson 1 directory:!clear
+
    ```bash
    cd /workspaces/c2c-full-stack-102/lesson-01
    pwd
