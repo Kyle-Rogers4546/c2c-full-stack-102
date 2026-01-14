@@ -2,10 +2,10 @@
 
 ## Goal
 
-Set up the starter **Spotify Music Search** React app in your Codespace/IDE. By the end of Lesson 2, your app should run locally and have React state set up for:
+Set up the starter **Music Search** React app in your Codespace/IDE. By the end of Lesson 2, your app should run locally and have React state set up for:
 
 - the user’s search input (`searchInput`)
-- the Spotify API token (`accessToken`)
+- the API token (`accessToken`)
 
 ## 1) Open the React app (already created)
 
@@ -80,7 +80,7 @@ const [searchInput, setSearchInput] = useState("");
 Then copy that pattern to create your access token state:
 
 ```js
-const [accessToken, setAccessToken] = useState("");
+const [accessToken, setAccessToken] = useState("123");
 ```
 
 ### Quick “check your work”
@@ -88,20 +88,19 @@ const [accessToken, setAccessToken] = useState("");
 - Your state lines must be inside `function App() { ... }`
 - They must be above `return ( ... )`
 - You should have: `searchInput` starting as `""` (empty string)
-- You should have: `accessToken` starting as `""` (empty string)
+- You should have: `accessToken` starting as `"123"` (the auth key for our API)
 
-## 3) Spotify credentials (outside the IDE, then back in)
+## 3) API token
 
-You’ll need to create a Spotify Developer app to get:
+For this lesson, the API we’re using is protected by a simple auth key.
 
-- **Client ID**
-- **Client Secret**
+- Auth key: `123`
 
-Then come back to `music-app/src/App.js` and paste those values into `CLIENT_ID` and `CLIENT_SECRET`.
+That’s why you initialize `accessToken` to `"123"` in your `useState` line.
 
 ## Lesson 2 “Done” checklist
 
 - `lesson-02/music-app` exists and runs with `npm start`
 - `App` contains:
   - `const [searchInput, setSearchInput] = useState("");`
-  - `const [accessToken, setAccessToken] = useState("");`
+  - `const [accessToken, setAccessToken] = useState("123");`
