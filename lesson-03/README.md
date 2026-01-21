@@ -207,7 +207,29 @@ const search = async () => {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      return data;
+      return (
+        <Container className="py-4">
+          <h1 className="mb-3">Music Search</h1>
+
+          <InputGroup className="mb-3" size="lg">
+            <FormControl
+              placeholder="Enter an artist name"
+              value={searchInput}
+              type="input"
+              onKeyDown={(event) => console.log("key pressed:", event.key)}
+              onChange={(event) => setSearchInput(event.target.value)}
+            />
+            <Button
+              variant="primary"
+              onClick={() => {
+                console.log("clicked button");
+              }}
+            >
+              Search
+            </Button>
+          </InputGroup>
+        </Container>
+      );
     });
 };
 ```
