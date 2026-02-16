@@ -45,6 +45,18 @@ app.post("/submit-form", (req, res) => {
   });
 });
 
+app.get("/api/ecommerce/products", (req, res) => {
+  const sql = "SELECT * FROM products";
+  db.query(sql, (err, result) => {
+    if (err) {
+      console.log(err);
+      return;
+    }
+    res.setHeader("Content-Type", "application/json");
+    res.json(result);
+  });
+});
+
 // Optional: quick health check
 app.get("/health", (req, res) => res.json({ ok: true }));
 
